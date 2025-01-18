@@ -1,0 +1,90 @@
+:root {
+  --color-101: 8, 44, 255;
+  --color-102: 135, 44, 234;
+  --color-103: 160, 205, 7;
+  --color-104: 217, 145, 62;
+}
+
+.ringtoneSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.ringtoneSection__code {
+  font-size: 4.5rem;
+  font-weight: var(--font-weight-light);
+}
+
+.ringtoneSection__title {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.ringtoneSection__bg {
+  display: flex;
+  margin-top: 3rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.ringtoneSection__rows {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.ringtoneSection__row {
+  flex: 1;
+}
+
+.ringtoneSection__rowTitle {
+  margin-bottom: 1rem;
+}
+
+.color101 {
+  .ringtoneSection__code {
+    color: rgb(var(--color-101));
+    text-shadow: 0 8px 0 rgba(var(--color-101), 0.2);
+  }
+
+  .ringtoneSection__bg {
+    background-color: rgba(var(--color-101), 0.2);
+    color: rgb(var(--color-101));
+  }
+}
+
+.color102 {
+  .ringtoneSection__code {
+    color: rgb(var(--color-102));
+    text-shadow: 0 8px 0 rgba(var(--color-102), 0.2);
+  }
+
+  .ringtoneSection__bg {
+    background-color: rgba(var(--color-102), 0.2);
+    color: rgb(var(--color-102));
+  }
+}
+
+.color103 {
+  .ringtoneSection__code {
+    color: rgb(var(--color-103));
+    text-shadow: 0 8px 0 rgba(var(--color-103), 0.2);
+  }
+
+  .ringtoneSection__bg {
+    background-color: rgba(var(--color-103), 0.2);
+    color: rgb(var(--color-103));
+  }
+}
+
+.color104 {
+  .ringtoneSection__code {
+    color: rgb(var(--color-104));
+    text-shadow: 0 8px 0 rgba(var(--color-104), 0.2);
+  }
+
+  .ringtoneSection__bg {
+    background-color: rgba(var(--color-104), 0.2);
+    color: rgb(var(--color-104));
+  }
+}

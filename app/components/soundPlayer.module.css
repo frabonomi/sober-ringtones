@@ -1,0 +1,58 @@
+.soundPlayer {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.2em 1em rgba(36, 37, 42, 0.2);
+    cursor: pointer;
+    transform: translateY(-0.2rem);
+
+    .soundPlayer__playButton {
+      background-color: currentColor;
+
+      svg {
+        color: white;
+      }
+    }
+  }
+
+  p {
+    color: var(--foreground);
+    font-size: 1.15rem;
+  }
+}
+
+.soundPlayer__content {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.soundPlayer__playButton {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+}
+
+.soundPlayer__progressBar {
+  background-color: currentColor;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  transition: all 0.05s ease-out;
+  width: 0;
+  z-index: 0;
+}

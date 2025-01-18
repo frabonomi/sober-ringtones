@@ -1,0 +1,46 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  min-height: 100svh;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.why {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-top: 150px;
+  width: 600px;
+}
+
+.why p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.ringtones {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-top: 150px;
+}
