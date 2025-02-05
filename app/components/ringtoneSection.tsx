@@ -10,6 +10,8 @@ type Props = {
 };
 
 export default function RingtoneSection({ code, title }: Props) {
+  const audioFormat = "mp3";
+
   return (
     <section className={`${styles.ringtoneSection} ${styles[`color${code}`]}`}>
       <Container>
@@ -26,7 +28,7 @@ export default function RingtoneSection({ code, title }: Props) {
               </div>
               <SoundPlayer
                 title={`${code} - Call`}
-                soundUrl={codeSoundUrlMapping[code].call}
+                soundUrl={`${codeSoundUrlMapping[code].call}.${audioFormat}`}
               ></SoundPlayer>
             </div>
             <div className={styles.ringtoneSection__row}>
@@ -35,7 +37,7 @@ export default function RingtoneSection({ code, title }: Props) {
               </div>
               <SoundPlayer
                 title={`${code} - Notification`}
-                soundUrl={codeSoundUrlMapping[code].notification}
+                soundUrl={`${codeSoundUrlMapping[code].notification}.${audioFormat}`}
               ></SoundPlayer>
             </div>
           </div>
