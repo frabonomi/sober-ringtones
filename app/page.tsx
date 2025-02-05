@@ -50,6 +50,8 @@ export default function Home() {
           ></RingtoneSection>
         </div>
       </main>
+
+      <Footer></Footer>
     </div>
   );
 }

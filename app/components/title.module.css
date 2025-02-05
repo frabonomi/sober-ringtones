@@ -7,3 +7,11 @@
   text-transform: uppercase;
   word-spacing: 100vw;
 }
+
+.small {
+  font-size: 1.5rem;
+}
+
+.inheritColor {
+  color: inherit;
+}
