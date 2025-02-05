@@ -37,6 +37,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

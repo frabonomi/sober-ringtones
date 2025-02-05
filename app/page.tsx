@@ -3,6 +3,7 @@ import Title from "./components/title";
 import SectionTitle from "./components/sectionTitle";
 import RingtoneSection from "./components/ringtoneSection";
 import Container from "./components/container";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <main>
         <Container>
           <p className={styles.intro}>
-            a weekend project by <a href="https://wize.io">wize.io</a>
+            a project by <a href="https://wize.io">wize.io</a>
           </p>
 
           <Title />
@@ -20,9 +21,8 @@ export default function Home() {
 
             <div>
               <p>
-                Ahhh, customizable ringtones. We've come a long way since the
-                good old phones' ringers. And maybe sometimes it's good to look
-                back.
+                We've come a long way since the good old phones' ringers. And
+                maybe sometimes it's good to look back.
               </p>
               <p>
                 Ever found yourself listening to ringtones on your brand new

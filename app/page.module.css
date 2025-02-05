@@ -1,5 +1,6 @@
 .page {
   --gray-rgb: 0, 0, 0;
+  --gray-alpha-500: rgba(var(--gray-rgb), 0.4);
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
 
@@ -7,7 +8,6 @@
   --button-secondary-hover: #f2f2f2;
 
   min-height: 100svh;
-  padding-bottom: 8rem;
   padding-top: 8rem;
 }
 
