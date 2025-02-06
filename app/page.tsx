@@ -4,6 +4,7 @@ import SectionTitle from "./components/sectionTitle";
 import RingtoneSection from "./components/ringtoneSection";
 import Container from "./components/container";
 import Footer from "./components/footer";
+import { ringtonesData } from "./constants/ringtonesMetadata";
 
 export default function Home() {
   return (
@@ -21,10 +22,6 @@ export default function Home() {
 
             <div>
               <p>
-                We've come a long way since the good old phones' ringers. And
-                maybe sometimes it's good to look back.
-              </p>
-              <p>
                 Ever found yourself listening to ringtones on your brand new
                 phone and not being able to find one that wouldn't make you and
                 everyone else around you cringe?
@@ -38,16 +35,13 @@ export default function Home() {
         </Container>
 
         <div className={styles.ringtones}>
-          <RingtoneSection code="101" title="The Low-Key"></RingtoneSection>
-          <RingtoneSection
-            code="102"
-            title="The Mellow Fella"
-          ></RingtoneSection>
-          <RingtoneSection code="103" title="The Exuberant"></RingtoneSection>
-          <RingtoneSection
-            code="104"
-            title="The Attention Seeker"
-          ></RingtoneSection>
+          {Object.keys(ringtonesData).map((key) => (
+            <RingtoneSection
+              key={key}
+              code={ringtonesData[key].code}
+              title={ringtonesData[key].title}
+            ></RingtoneSection>
+          ))}
         </div>
       </main>
 
