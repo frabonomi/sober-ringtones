@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./soundPlayer.module.css";
+import { usePlayerProgress } from "../hooks/usePlayerProgress";
 
 type Props = {
   title: string;
@@ -9,9 +10,9 @@ type Props = {
 };
 
 export default function SoundPlayer({ title, soundUrl }: Props) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [progress, setProgress] = usePlayerProgress(audioRef);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     if (audioRef.current === null) {
@@ -25,27 +26,6 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
       audioRef.current.currentTime = 0;
     }
   });
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    if (isPlaying) {
-      interval = setInterval(() => {
-        if (audioRef.current === null) {
-          clearInterval(interval);
-          return;
-        }
-
-        setProgress(
-          (audioRef.current.currentTime / audioRef.current.duration) * 100
-        );
-      }, 50);
-    } else {
-      setProgress(0);
-    }
-
-    return () => clearInterval(interval);
-  }, [setProgress, isPlaying]);
 
   return (
     <div
