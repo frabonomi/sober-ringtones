@@ -29,7 +29,7 @@
 
 .ringtoneSection__rows {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -86,5 +86,11 @@
   .ringtoneSection__bg {
     background-color: rgba(var(--color-104), 0.2);
     color: rgb(var(--color-104));
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .ringtoneSection__rows {
+    flex-direction: row;
   }
 }

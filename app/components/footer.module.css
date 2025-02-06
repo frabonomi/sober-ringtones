@@ -5,8 +5,8 @@
   line-height: 1.4;
   margin: 10rem auto 4rem;
   margin-bottom: 4rem;
+  max-width: 500px;
   text-align: center;
-  width: 500px;
 
   p {
     margin-bottom: 0.5rem;
