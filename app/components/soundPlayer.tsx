@@ -27,10 +27,22 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
     }
   });
 
+  function handleKeyDown(e) {
+    if (e.code === "Space") {
+      e.preventDefault();
+    }
+    if (["Enter", "Space"].includes(e.code)) {
+      setIsPlaying(!isPlaying);
+    }
+  }
+
   return (
     <div
       className={styles.soundPlayer}
       onClick={() => setIsPlaying(!isPlaying)}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="button"
     >
       <audio
         ref={audioRef}
@@ -72,7 +84,37 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
             </svg>
           )}
         </div>
-        <p>{title}</p>
+        <p className={styles.soundPlayer__title}>{title}</p>
+
+        <a
+          href={soundUrl}
+          download
+          className={styles.soundPlayer__download}
+          onClick={(e) => e.stopPropagation()}
+          onKeyDown={(e) => e.stopPropagation()}
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            role="img"
+            color="#000000"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M13.0001 4.50001L13.0001 12.0857L14.293 10.7927L15.7072 12.2069L12.0001 15.9143L8.29297 12.2069L9.70723 10.7927L11.0001 12.0857L11.0001 4.50001H13.0001Z"
+              fill="#000000"
+            ></path>
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M19.0001 19.5H5V17.5H19.0001V19.5Z"
+              fill="#000000"
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
   );

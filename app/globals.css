@@ -13,6 +13,12 @@ html {
   font-size: 14px;
 }
 
+:focus-visible {
+  outline: 3px solid var(--foreground);
+  outline-offset: 0.2rem;
+  transition: none;
+}
+
 html,
 body {
   max-width: 100vw;
