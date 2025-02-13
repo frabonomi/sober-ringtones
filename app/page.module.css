@@ -31,7 +31,7 @@
   margin-top: 80px;
   max-width: 600px;
 
-  p:not(:last-child) {
+  .page__whyParagraph:not(:last-child) {
     margin-bottom: 2rem;
   }
 

@@ -14,13 +14,13 @@
     .soundPlayer__playButton {
       background-color: currentColor;
 
-      svg {
+      .soundPlayer__playIcon {
         color: white;
       }
     }
   }
 
-  p {
+  .soundPlayer__title {
     color: var(--foreground);
     font-size: 1.15rem;
   }
@@ -62,7 +62,7 @@
   transition: transform 0.05s ease-out;
   width: 2.5rem;
 
-  svg path {
+  .soundPlayer__downloadIcon path {
     fill: rgba(0, 0, 0, 0.4);
   }
 
@@ -71,7 +71,7 @@
     background-color: currentColor;
     transform: scale(1.15);
 
-    svg path {
+    .soundPlayer__downloadIcon path {
       fill: white;
     }
   }

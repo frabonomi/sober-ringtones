@@ -21,12 +21,12 @@ export default function Home() {
             <SectionTitle>The why</SectionTitle>
 
             <div>
-              <p>
+              <p className={styles.page__whyParagraph}>
                 Ever found yourself listening to ringtones on your brand new
                 phone and not being able to find one that wouldn't make you and
                 everyone else around you cringe?
               </p>
-              <p>
+              <p className={styles.page__whyParagraph}>
                 On Sober Ringtones you can find a humble and modest ringtone for
                 your phone calls and notifications.
               </p>
