@@ -1,14 +1,15 @@
 .footer {
-  /* background-color: var(--gray-alpha-100); */
   color: var(--gray-alpha-500);
   font-size: 0.95rem;
   line-height: 1.4;
   margin: 10rem auto 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-bottom: 4rem;
   max-width: 500px;
   text-align: center;
 
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 }

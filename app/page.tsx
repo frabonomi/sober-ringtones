@@ -11,13 +11,13 @@ export default function Home() {
     <div className={styles.page}>
       <main>
         <Container>
-          <p className={styles.intro}>
+          <p className={styles.page__intro}>
             a project by <a href="https://wize.io">wize.io</a>
           </p>
 
           <Title />
 
-          <div className={`${styles.why} ${styles.section}`}>
+          <div className={`${styles.page__why} ${styles.page__section}`}>
             <SectionTitle>The why</SectionTitle>
 
             <div>
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </Container>
 
-        <div className={styles.ringtones}>
+        <div className={styles.page__ringtones}>
           {Object.keys(ringtonesData).map((key) => (
             <RingtoneSection
               key={key}

@@ -8,37 +8,39 @@
   --button-secondary-hover: #f2f2f2;
 
   min-height: 100svh;
-  padding-top: 8rem;
+  padding-top: 4rem;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 8rem;
+  }
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 960px;
-}
-
-.section {
+.page__section {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.intro {
+.page__intro {
   margin-bottom: 2rem;
 }
 
-.why {
+.page__why {
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-top: 150px;
+  margin-top: 80px;
   max-width: 600px;
+
+  p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-top: 150px;
+  }
 }
 
-.why p:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.ringtones {
+.page__ringtones {
   display: flex;
   flex-direction: column;
   gap: 8rem;

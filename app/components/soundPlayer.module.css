@@ -6,7 +6,7 @@
   transition: all 0.2s ease-out;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     box-shadow: 0 0.2em 1em rgba(36, 37, 42, 0.2);
     cursor: pointer;
     transform: translateY(-0.2rem);
@@ -38,11 +38,43 @@
 .soundPlayer__playButton {
   align-items: center;
   border: 1px solid currentColor;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   height: 3rem;
   width: 3rem;
+}
+
+.soundPlayer__title {
+  flex: 1;
+}
+
+.soundPlayer__download {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 0.5rem;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  transition: transform 0.05s ease-out;
+  width: 2.5rem;
+
+  svg path {
+    fill: rgba(0, 0, 0, 0.4);
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: currentColor;
+    transform: scale(1.15);
+
+    svg path {
+      fill: white;
+    }
+  }
 }
 
 .soundPlayer__progressBar {
