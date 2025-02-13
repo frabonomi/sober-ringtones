@@ -14,7 +14,8 @@ html {
 }
 
 :focus-visible {
-  outline: 3px solid var(--foreground);
+  border-radius: 1px;
+  outline: 2px solid var(--foreground);
   outline-offset: 0.2rem;
   transition: none;
 }
