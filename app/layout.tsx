@@ -35,7 +35,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={archia.className}>{children}</body>
+      <body className={archia.className}>
+        {children}
+
+        <script
+          data-collect-dnt="true"
+          async
+          src="https://scripts.simpleanalyticscdn.com/latest.js"
+        ></script>
+      </body>
     </html>
   );
 }
