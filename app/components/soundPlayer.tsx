@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import styles from "./soundPlayer.module.css";
 import { usePlayerProgress } from "../hooks/usePlayerProgress";
 
@@ -27,7 +27,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
     }
   });
 
-  function handleKeyDown(e) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>): void {
     if (e.code === "Space") {
       e.preventDefault();
     }
@@ -64,6 +64,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
         <div className={styles.soundPlayer__playButton}>
           {!isPlaying ? (
             <svg
+              className={styles.soundPlayer__playIcon}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
@@ -94,6 +95,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
           onKeyDown={(e) => e.stopPropagation()}
         >
           <svg
+            className={styles.soundPlayer__downloadIcon}
             width="24"
             height="24"
             viewBox="0 0 24 24"

@@ -7,6 +7,11 @@
   --font-weight-light: 100;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+
+  --color-101: 8, 44, 255;
+  --color-102: 135, 44, 234;
+  --color-103: 160, 205, 7;
+  --color-104: 217, 145, 62;
 }
 
 html {

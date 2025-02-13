@@ -8,8 +8,8 @@
   margin-bottom: 4rem;
   max-width: 500px;
   text-align: center;
+}
 
-  p {
-    margin-bottom: 1rem;
-  }
+.footer__paragraph {
+  margin-bottom: 1rem;
 }

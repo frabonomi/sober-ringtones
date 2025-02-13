@@ -6,7 +6,7 @@ import ccLicenseImage from "../../public/by-sa.png";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>
+      <p className={styles.footer__paragraph}>
         All ringtones were created by Francesco Bonomi and are distributed under
         the{" "}
         <a href="https://creativecommons.org/licenses/by-sa/4.0/">
