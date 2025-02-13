@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import styles from "./soundPlayer.module.css";
 import { usePlayerProgress } from "../hooks/usePlayerProgress";
 
@@ -27,7 +27,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
     }
   });
 
-  function handleKeyDown(e) {
+  function handleKeyDown(e: KeyboardEvent<HTMLDivElement>): void {
     if (e.code === "Space") {
       e.preventDefault();
     }
