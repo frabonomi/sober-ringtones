@@ -62,28 +62,20 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
 
       <div className={styles.soundPlayer__content}>
         <div className={styles.soundPlayer__playButton}>
-          {!isPlaying ? (
-            <svg
-              className={styles.soundPlayer__playIcon}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              width="20px"
-              height="20px"
-            >
+          <svg
+            className={styles.soundPlayer__playIcon}
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            width="20px"
+            height="20px"
+          >
+            {!isPlaying ? (
               <path d="M8 5v14l11-7z" />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              width="20px"
-              height="20px"
-            >
+            ) : (
               <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-            </svg>
-          )}
+            )}
+          </svg>
         </div>
         <p className={styles.soundPlayer__title}>{title}</p>
 
