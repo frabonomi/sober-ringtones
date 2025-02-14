@@ -22,13 +22,17 @@ export default function Home() {
 
             <div>
               <p className={styles.page__whyParagraph}>
-                Ever found yourself listening to ringtones on your brand new
-                phone and not being able to find one that wouldn&apos;t make you
-                and everyone else around you cringe?
+                Ever found yourself scrolling through ringtones on your
+                brand-new phone, only to realize you can&apos;t find one that
+                wouldn&apos;t make you and everyone around you cringe?
               </p>
               <p className={styles.page__whyParagraph}>
                 On Sober Ringtones you can find a humble and modest ringtone for
                 your phone calls and notifications.
+              </p>
+              <p className={styles.page__whyParagraph}>
+                If after listening to them, you think &quot;Hmm, nothing
+                special&quot;, then I did a good job.
               </p>
             </div>
           </div>
