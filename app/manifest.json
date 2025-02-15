@@ -1,6 +1,7 @@
 {
   "name": "Sober Ringtones",
   "short_name": "Sober Ringtones",
+  "description": "Humble ringtones for your phone calls and notifications",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

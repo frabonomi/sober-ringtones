@@ -24,14 +24,13 @@ const archia = localFont({
 
 export const metadata: Metadata = {
   title: "Sober Ringtones - Uncringe your ringtones",
-  description:
-    "Humble and modest ringtones for your phone calls and notifications",
+  description: "Humble ringtones for your phone calls and notifications",
   openGraph: {
-    images: ["../public/og-image.png"],
     title: "Sober Ringtones - Uncringe your ringtones",
-    description:
-      "Humble and modest ringtones for your phone calls and notifications",
+    description: "Humble ringtones for your phone calls and notifications",
     url: "https://sober-ringtones.wize.io",
+    locale: "en_US",
+    type: "website",
   },
 };
 
