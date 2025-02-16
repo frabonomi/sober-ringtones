@@ -1,11 +1,11 @@
 export const ringtonesData: Record<string, { code: string; title: string }> = {
   "101": {
     code: "101",
-    title: "The Low-Key",
+    title: "Stealth Mode",
   },
   "102": {
     code: "102",
-    title: "The Mellow Fella",
+    title: "The Low-Key",
   },
   "103": {
     code: "103",
