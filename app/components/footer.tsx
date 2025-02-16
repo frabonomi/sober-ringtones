@@ -4,6 +4,7 @@ import styles from "./footer.module.css";
 import ccLicenseImage from "../../public/by-sa.png";
 import Container from "./container";
 import SharingButtons from "./sharingButtons";
+import GithubStarButton from "./githubStarButton";
 
 export default function Footer() {
   return (
@@ -14,6 +15,10 @@ export default function Footer() {
             Help a friend, share this project
           </p>
           <SharingButtons></SharingButtons>
+
+          <p className={styles.footer__starOnGitHub}>
+            <GithubStarButton></GithubStarButton>
+          </p>
         </div>
 
         <div className={styles.footer__license}>
