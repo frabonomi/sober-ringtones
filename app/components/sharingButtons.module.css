@@ -3,11 +3,3 @@
   gap: 0.25rem;
   justify-content: flex-start;
 }
-
-.small {
-  font-size: 1.5rem;
-}
-
-.inheritColor {
-  color: inherit;
-}

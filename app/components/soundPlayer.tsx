@@ -3,6 +3,7 @@
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import styles from "./soundPlayer.module.css";
 import { usePlayerProgress } from "../hooks/usePlayerProgress";
+import { saEvent } from "../utils/saEvent";
 
 type Props = {
   title: string;
@@ -32,14 +33,22 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
       e.preventDefault();
     }
     if (["Enter", "Space"].includes(e.code)) {
-      setIsPlaying(!isPlaying);
+      onTogglePlay();
+    }
+  }
+
+  function onTogglePlay() {
+    setIsPlaying(!isPlaying);
+
+    if (!isPlaying) {
+      saEvent("ringtone played", { title });
     }
   }
 
   return (
     <div
       className={styles.soundPlayer}
-      onClick={() => setIsPlaying(!isPlaying)}
+      onClick={() => onTogglePlay()}
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="button"
@@ -77,13 +86,17 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
             )}
           </svg>
         </div>
+
         <p className={styles.soundPlayer__title}>{title}</p>
 
         <a
           href={soundUrl}
           download
           className={styles.soundPlayer__download}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            saEvent("ringtone downloaded", { title });
+          }}
           onKeyDown={(e) => e.stopPropagation()}
         >
           <svg

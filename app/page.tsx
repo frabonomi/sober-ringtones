@@ -30,10 +30,6 @@ export default function Home() {
                 On Sober Ringtones you can find a humble and modest ringtone for
                 your phone calls and notifications.
               </p>
-              <p className={styles.page__whyParagraph}>
-                If after listening to them, you think &quot;Hmm, nothing
-                special&quot;, then I did a good job.
-              </p>
             </div>
           </div>
         </Container>
