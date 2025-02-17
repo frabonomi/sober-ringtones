@@ -98,6 +98,8 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
             saEvent("ringtone downloaded", { title });
           }}
           onKeyDown={(e) => e.stopPropagation()}
+          aria-label={`Download ${title}`}
+          title={`Download ${title}`}
         >
           <svg
             className={styles.soundPlayer__downloadIcon}
