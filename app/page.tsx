@@ -5,6 +5,7 @@ import RingtoneSection from "./components/ringtoneSection";
 import Container from "./components/container";
 import Footer from "./components/footer";
 import { ringtonesData } from "./constants/ringtonesMetadata";
+import Referrals from "./components/referrals";
 
 export default function Home() {
   return (
@@ -21,12 +22,12 @@ export default function Home() {
             <SectionTitle>The why</SectionTitle>
 
             <div>
-              <p className={styles.page__whyParagraph}>
+              <p className={styles.page__paragraph}>
                 Ever found yourself scrolling through ringtones on your
                 brand-new phone, only to realize you can&apos;t find one that
                 wouldn&apos;t make you and everyone around you cringe?
               </p>
-              <p className={styles.page__whyParagraph}>
+              <p className={styles.page__paragraph}>
                 On Sober Ringtones you can find a humble and modest ringtone for
                 your phone calls and notifications.
               </p>
@@ -44,6 +45,12 @@ export default function Home() {
           ))}
         </div>
       </main>
+
+      <div className={`${styles.page__referrals}`}>
+        <Container>
+          <Referrals></Referrals>
+        </Container>
+      </div>
 
       <Footer></Footer>
     </div>

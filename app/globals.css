@@ -1,8 +1,14 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e1e23;
   --primary: #082cff;
   --primary-rgb: 8, 44, 255;
+
+  --gray-rgb: 30, 30, 35;
+  --gray-alpha-400: rgba(var(--gray-rgb), 0.4);
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.2);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.1);
+  --gray-alpha-50: rgba(var(--gray-rgb), 0.05);
 
   --font-weight-light: 100;
   --font-weight-normal: 400;
@@ -46,7 +52,7 @@ body {
 }
 
 *::selection {
-  background: #d6dcff;
+  background: #e4e7ff;
   color: var(--primary);
 }
 

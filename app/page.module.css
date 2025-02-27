@@ -1,12 +1,4 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-500: rgba(var(--gray-rgb), 0.4);
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
   min-height: 100svh;
   padding-top: 4rem;
 
@@ -19,21 +11,28 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
 }
 
 .page__intro {
   margin-bottom: 2rem;
 }
 
-.page__why {
+.page__paragraph {
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-top: 80px;
-  max-width: 600px;
 
-  .page__whyParagraph:not(:last-child) {
+  &:not(:last-of-type) {
     margin-bottom: 2rem;
   }
+}
+
+.page__why {
+  margin-top: 80px;
+  max-width: 600px;
 
   @media screen and (min-width: 960px) {
     margin-top: 150px;
@@ -45,4 +44,8 @@
   flex-direction: column;
   gap: 8rem;
   margin-top: 150px;
+}
+
+.page__referrals {
+  margin-top: 6rem;
 }
