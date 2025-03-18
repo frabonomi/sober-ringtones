@@ -5,7 +5,7 @@
   font-size: 0.95rem;
   gap: 2rem;
   line-height: 1.4;
-  margin: 4rem auto 4rem;
+  margin: 8rem auto 4rem;
 
   @media screen and (min-width: 960px) {
     flex-direction: row-reverse;

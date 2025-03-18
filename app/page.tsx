@@ -34,7 +34,12 @@ export default function Home() {
             </div>
           </div>
         </Container>
-
+        ``
+        <div className={`${styles.page__referrals}`}>
+          <Container>
+            <Referrals></Referrals>
+          </Container>
+        </div>
         <div className={styles.page__ringtones}>
           {Object.keys(ringtonesData).map((key) => (
             <RingtoneSection
@@ -45,12 +50,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-
-      <div className={`${styles.page__referrals}`}>
-        <Container>
-          <Referrals></Referrals>
-        </Container>
-      </div>
 
       <Footer></Footer>
     </div>
