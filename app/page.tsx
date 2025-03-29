@@ -28,8 +28,8 @@ export default function Home() {
                 wouldn&apos;t make you and everyone around you cringe?
               </p>
               <p className={styles.page__paragraph}>
-                On Sober Ringtones you can find a humble and modest ringtone for
-                your phone calls and notifications.
+                On Sober Ringtones you can find a humble and minimal ringtone
+                for your phone calls and notifications.
               </p>
             </div>
           </div>
