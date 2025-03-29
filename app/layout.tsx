@@ -23,13 +23,13 @@ const archia = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sober Ringtones - Uncringe your ringtones",
+  title: "Sober Ringtones - Minimal ringtones for a noisy world",
   description:
-    "Humble and minimal ringtones for your phone calls and notifications",
+    "Uncringe your ringtones. On Sober Ringtones you can find a humble and modest ringtone for your phone calls and notifications.",
   openGraph: {
-    title: "Sober Ringtones - Uncringe your ringtones",
+    title: "Sober Ringtones - Minimal ringtones for a noisy world",
     description:
-      "Humble and minimal ringtones for your phone calls and notifications",
+      "Uncringe your ringtones. On Sober Ringtones you can find a humble and modest ringtone for your phone calls and notifications.",
     url: "https://sober-ringtones.wize.io",
     locale: "en_US",
     type: "website",
