@@ -6,6 +6,7 @@ import Container from "./components/container";
 import Footer from "./components/footer";
 import { ringtonesData } from "./constants/ringtonesMetadata";
 import Referrals from "./components/referrals";
+import ProductHuntBadge from "./components/productHuntBadge";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
 
         <div className={`${styles.page__referrals}`}>
           <Container>
-            <Referrals></Referrals>
+            <ProductHuntBadge />
           </Container>
         </div>
 
@@ -51,6 +52,12 @@ export default function Home() {
           ))}
         </div>
       </main>
+
+      <div className={`${styles.page__referrals}`}>
+        <Container>
+          <Referrals></Referrals>
+        </Container>
+      </div>
 
       <Footer></Footer>
     </div>
