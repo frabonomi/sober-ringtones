@@ -6,7 +6,6 @@ import Container from "./components/container";
 import Footer from "./components/footer";
 import { ringtonesData } from "./constants/ringtonesMetadata";
 import Referrals from "./components/referrals";
-import ProductHuntBadge from "./components/productHuntBadge";
 
 export default function Home() {
   return (
@@ -35,12 +34,6 @@ export default function Home() {
             </div>
           </div>
         </Container>
-
-        <div className={`${styles.page__referrals}`}>
-          <Container>
-            <ProductHuntBadge />
-          </Container>
-        </div>
 
         <div className={styles.page__ringtones}>
           {Object.keys(ringtonesData).map((key) => (
