@@ -53,7 +53,7 @@ export default async function AddCustomRingtoneAndroidPage() {
             >
               <Image
                 src={settingsImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="sounds and vibration settings"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>
@@ -65,7 +65,7 @@ export default async function AddCustomRingtoneAndroidPage() {
             >
               <Image
                 src={soundAndVibrationImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="phone ringtone settings"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>
@@ -77,7 +77,7 @@ export default async function AddCustomRingtoneAndroidPage() {
             >
               <Image
                 src={phoneRingtoneImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="my sounds settings"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>
@@ -89,7 +89,7 @@ export default async function AddCustomRingtoneAndroidPage() {
             >
               <Image
                 src={mySoundsImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="plus button to add a ringtone"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>
@@ -102,7 +102,7 @@ export default async function AddCustomRingtoneAndroidPage() {
             >
               <Image
                 src={mySoundsSelectImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="choose your custom ringtone"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>

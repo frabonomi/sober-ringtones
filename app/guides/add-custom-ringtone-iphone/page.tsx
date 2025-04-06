@@ -17,6 +17,7 @@ import shareImage from "../../../public/guides/ios/share.png";
 import exportImage from "../../../public/guides/ios/export.png";
 import useAsImage from "../../../public/guides/ios/use-sound-as.png";
 import useAsSelectImage from "../../../public/guides/ios/use-sound-as-select.png";
+import ringtoneImage from "../../../public/guides/ios/ringtone.png";
 
 export const metadata: Metadata = {
   title: "How to set a custom ringtone on iPhone - A step-by-step guide",
@@ -71,7 +72,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={homeScreenImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="touch and hold the GarageBand app icon then tap Create New Audio Recording"
                 style={{ width: "60%", height: "auto" }}
               ></Image>
             </div>
@@ -81,7 +82,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={tracksButtonImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="Tracks button on GarageBand"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -92,7 +93,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={loopsImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="Loop browser button on GarageBand"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -103,14 +104,14 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={filesImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="browser on GarageBand"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={filesSelectImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="files browser on GarageBand"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -121,7 +122,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={dragFileImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="touch and hold the file"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -131,7 +132,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={timelineImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="Place it at the beginning of the track"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -141,28 +142,35 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={mySongsImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="My Songs button on GarageBand"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
           </li>
           <li>
-            In the browser, tap the <b>More button</b>, tap <b>Select</b>, then
-            select the song you just created.
+            In the browser, tap and hold the song you just created, then tap the{" "}
+            <b>Share</b> button.
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={holdSongImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="tap and hold the song you just created"
+                style={{ width: "100%", height: "auto" }}
+              ></Image>
+            </div>
+            <div className={`${styles.guides__imageContainer}`}>
+              <Image
+                src={shareImage}
+                alt="tap the Share button"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
           </li>
           <li>
-            Tap the <b>Share</b> button, then tap <b>Ringtone</b>.
+            Tap <b>Ringtone</b>.
             <div className={`${styles.guides__imageContainer}`}>
               <Image
-                src={shareImage}
-                alt="CC BY-SA 4.0 license icon"
+                src={ringtoneImage}
+                alt="tap Ringtone"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -172,7 +180,7 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={exportImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="tap export"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
@@ -185,14 +193,14 @@ export default async function AddCustomRingtoneIphonePage() {
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={useAsImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="tap use sound as"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
             <div className={`${styles.guides__imageContainer}`}>
               <Image
                 src={useAsSelectImage}
-                alt="CC BY-SA 4.0 license icon"
+                alt="choose Standard Ringtone or Text Tone"
                 style={{ width: "100%", height: "auto" }}
               ></Image>
             </div>
