@@ -9,3 +9,8 @@ On Sober Ringtones you can find a humble and modest ringtone for your phone call
 ## Downloads
 
 [Download ringtones](https://sober-ringtones.wize.io)
+
+## How to set a custom ringtone on iOS or Android
+
+- [How to add a custom ringtone on iOS](https://sober-ringtones.wize.io/guides/add-custom-ringtone-iphone)
+- [How to set a custom ringtone on Android](https://sober-ringtones.wize.io/guides/add-custom-ringtone-android)
