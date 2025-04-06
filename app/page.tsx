@@ -6,13 +6,14 @@ import Container from "./components/container";
 import Footer from "./components/footer";
 import { ringtonesData } from "./constants/ringtonesMetadata";
 import Referrals from "./components/referrals";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main>
         <Container>
-          <p className={styles.page__intro}>
+          <p className={`${styles.page__intro} styledLinks`}>
             a project by <a href="https://wize.io">wize.io</a>
           </p>
 
@@ -30,6 +31,21 @@ export default function Home() {
               <p className={styles.page__paragraph}>
                 On Sober Ringtones you can find a humble and minimal ringtone
                 for your phone calls and notifications.
+              </p>
+            </div>
+          </div>
+
+          <div className={`${styles.page__section} styledLinks`}>
+            <SectionTitle>How to guides</SectionTitle>
+
+            <div>
+              <p className={styles.page__paragraph}>
+                Learn how to set a custom ringtone on{" "}
+                <Link href={"/guides/add-custom-ringtone-android"}>
+                  Android
+                </Link>{" "}
+                or{" "}
+                <Link href={"/guides/add-custom-ringtone-iphone"}>iPhone</Link>.
               </p>
             </div>
           </div>

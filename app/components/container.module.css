@@ -4,10 +4,14 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: 100%;
+
+  @media screen and (min-width: 960px) {
+    width: 960px;
+  }
 }
 
-@media screen and (min-width: 960px) {
-  .container {
-    width: 960px;
+.containerSmall {
+  @media screen and (min-width: 720px) {
+    width: 720px;
   }
 }
