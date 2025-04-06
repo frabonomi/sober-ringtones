@@ -41,11 +41,11 @@ export default function Home() {
             <div>
               <p className={styles.page__paragraph}>
                 Learn how to set a custom ringtone on{" "}
+                <Link href={"/guides/add-custom-ringtone-iphone"}>iOS</Link> or{" "}
                 <Link href={"/guides/add-custom-ringtone-android"}>
                   Android
-                </Link>{" "}
-                or{" "}
-                <Link href={"/guides/add-custom-ringtone-iphone"}>iPhone</Link>.
+                </Link>
+                .
               </p>
             </div>
           </div>

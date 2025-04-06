@@ -73,7 +73,7 @@ export default async function AddCustomRingtoneIphonePage() {
               <Image
                 src={homeScreenImage}
                 alt="touch and hold the GarageBand app icon then tap Create New Audio Recording"
-                style={{ width: "60%", height: "auto" }}
+                style={{ width: "70%", height: "auto" }}
               ></Image>
             </div>
           </li>

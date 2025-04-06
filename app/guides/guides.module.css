@@ -84,8 +84,12 @@ ol.guides__steps {
   border-radius: 1rem;
   display: flex;
   justify-content: center;
-  padding: 4rem;
+  padding: 1rem;
   margin-top: 2rem;
+
+  @media screen and (min-width: 960px) {
+    padding: 4rem;
+  }
 }
 
 .guides__imageContainerBottom {

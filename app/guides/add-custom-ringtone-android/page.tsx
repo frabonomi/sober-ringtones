@@ -8,7 +8,6 @@ import phoneRingtoneImage from "../../../public/guides/android/phone-ringtone.pn
 import mySoundsImage from "../../../public/guides/android/my-sounds.png";
 import mySoundsSelectImage from "../../../public/guides/android/my-sounds-select.png";
 import { Metadata } from "next";
-import SectionTitle from "@/app/components/sectionTitle";
 
 export const metadata: Metadata = {
   title: "How to set a custom ringtone on Android - A step-by-step guide",
@@ -36,7 +35,6 @@ export default async function AddCustomRingtoneAndroidPage() {
       </p>
 
       <main className={styles.guides__main}>
-        <SectionTitle>A step-by-step guide</SectionTitle>
         <ol className={styles.guides__steps}>
           <li>
             Download the file you want to use as a ringtone. Check out{" "}
