@@ -66,6 +66,28 @@ a {
   }
 }
 
+.styledLinks a {
+  background-image: linear-gradient(
+    to right,
+    rgba(var(--primary-rgb), 0.2) 0%,
+    rgba(var(--primary-rgb), 0.2) 75%
+  );
+  background-position: 0 0.9em;
+  background-repeat: repeat-x;
+  background-size: 1px 8px;
+  border-radius: 4px;
+  padding: 0.15em;
+  margin: -0.15em;
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: rgba(var(--primary-rgb), 0.75);
+    background-image: none;
+    color: white;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
