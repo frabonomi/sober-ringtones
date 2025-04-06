@@ -40,7 +40,7 @@ export default async function AddCustomRingtoneAndroidPage() {
         <ol className={styles.guides__steps}>
           <li>
             Download the file you want to use as a ringtone. Check out{" "}
-            <Link href={"/"}>Sober Ringtones</Link> if you're looking for a
+            <Link href={"/"}>Sober Ringtons</Link> if you&apos;re looking for a
             minimal and humble ringtone for your calls and notifications.
           </li>
           <li>

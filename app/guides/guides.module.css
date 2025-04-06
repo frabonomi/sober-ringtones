@@ -2,15 +2,30 @@
   margin-top: 5rem;
 }
 
-.guides__header {
-  margin-bottom: 2rem;
+.guides__backButton {
+  align-items: center;
+  display: flex;
+  color: var(--gray-alpha-400);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold);
+  gap: 0.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: var(--foreground);
+    text-decoration: none;
+  }
 }
 
 .guides__title {
   font-size: 3rem;
   font-weight: var(--font-weight-normal);
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .guides__subtitle {
@@ -26,7 +41,7 @@
   margin-bottom: 5rem;
   margin-top: 5rem;
 
-  p {
+  & p {
     margin-bottom: 1.5rem;
   }
 }

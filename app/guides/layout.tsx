@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Container from "../components/container";
-import Title from "../components/title";
 import styles from "./guides.module.css";
+import { ArrowLeft } from "lucide-react";
 
 export default function GuidesLayout({
   children,
@@ -11,9 +11,10 @@ export default function GuidesLayout({
   return (
     <div className={`${styles.guides}`}>
       <Container small>
-        <header className={styles.guides__header}>
-          <Link href="/">
-            <Title size="small" />
+        <header>
+          <Link href="/" className={styles.guides__backButton}>
+            <ArrowLeft width={"1em"} />
+            Back to Sober Ringtones
           </Link>
         </header>
       </Container>
