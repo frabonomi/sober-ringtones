@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+
 import "./globals.css";
+import Script from "next/script";
 
 const archia = localFont({
   src: [
@@ -46,11 +48,10 @@ export default function RootLayout({
       <body className={archia.className}>
         {children}
 
-        <script
+        <Script
           data-collect-dnt="true"
-          async
           src="https://scripts.simpleanalyticscdn.com/latest.js"
-        ></script>
+        />
       </body>
     </html>
   );

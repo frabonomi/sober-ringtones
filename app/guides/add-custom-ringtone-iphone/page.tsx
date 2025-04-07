@@ -37,11 +37,11 @@ export default async function AddCustomRingtoneIphonePage() {
   return (
     <>
       <h1 className={styles.guides__title}>
-        How to add a custom ringtone on iPhone
+        How to add a custom ringtone on iOS
       </h1>
       <p className={styles.guides__subtitle}>
         Learn how to set a custom ringtone for your calls or notifications from
-        an audio file on iOS
+        an audio file on your iPhone
       </p>
 
       <main className={styles.guides__main}>
