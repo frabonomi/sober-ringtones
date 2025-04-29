@@ -19,10 +19,10 @@ export function usePlayerProgress(
       setProgress(
         (audioRef.current.currentTime / audioRef.current.duration) * 100
       );
-    }, 50);
+    }, 100);
 
     return () => clearInterval(interval);
-  });
+  }, [audioRef]);
 
   return [progress, setProgress];
 }

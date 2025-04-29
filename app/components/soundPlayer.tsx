@@ -26,7 +26,16 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-  });
+  
+    return () => {
+      if (audioRef.current === null) {
+        return;
+      }
+
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    };
+  }, [isPlaying]);
 
   function handleKeyDown(e: KeyboardEvent<HTMLDivElement>): void {
     if (e.code === "Space") {
