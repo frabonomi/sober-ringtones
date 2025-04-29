@@ -2,7 +2,6 @@
 
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import styles from "./soundPlayer.module.css";
-import { usePlayerProgress } from "../hooks/usePlayerProgress";
 import { saEvent } from "../utils/saEvent";
 
 type Props = {
@@ -12,7 +11,6 @@ type Props = {
 
 export default function SoundPlayer({ title, soundUrl }: Props) {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [progress, setProgress] = usePlayerProgress(audioRef);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -67,14 +65,14 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
         src={soundUrl}
         onEnded={() => {
           setIsPlaying(false);
-          setProgress(0);
         }}
       ></audio>
 
       <div
         className={styles.soundPlayer__progressBar}
         style={{
-          width: isPlaying ? `${progress}%` : "unset",
+          width: isPlaying ? `100%` : "0",
+          transitionDuration:  isPlaying ? `${audioRef.current?.duration}s` : '0s'
         }}
       ></div>
 
