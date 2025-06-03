@@ -1,8 +1,5 @@
-import Image from "next/image";
 import styles from "./footer.module.css";
 
-import ccLicenseImage from "../../public/by-sa.png";
-import Container from "./container";
 import SharingButtons from "./sharingButtons";
 import GithubStarButton from "./githubStarButton";
 import Title from "./title";
