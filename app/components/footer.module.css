@@ -23,7 +23,7 @@
   }
 }
 
-.footer__license {
+.footer__info {
   flex: 1;
 }
 
@@ -33,4 +33,28 @@
 
 .footer__starOnGitHub {
   margin-top: 0.5rem;
+}
+
+.footer__logo {
+  color: var(--gray-alpha-200);
+  display: block;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--gray-alpha-400);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.footer__license {
+  color: var(--gray-alpha-200);
+  font-size: 0.8rem;
+  margin-bottom: .5rem;
 }

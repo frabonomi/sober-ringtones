@@ -205,6 +205,9 @@ export default async function AddCustomRingtoneIphonePage() {
               ></Image>
             </div>
           </li>
+          <li className={styles.guides__stepDone}>
+            Done! Go back to <Link href={"/"}>Sober Ringtones</Link>.
+          </li>
         </ol>
       </main>
     </>

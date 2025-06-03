@@ -2,6 +2,7 @@ import Link from "next/link";
 import Container from "../components/container";
 import styles from "./guides.module.css";
 import { ArrowLeft } from "lucide-react";
+import Footer from "../components/footer";
 
 export default function GuidesLayout({
   children,
@@ -21,6 +22,9 @@ export default function GuidesLayout({
       <article className={`styledLinks`}>
         <Container small>{children}</Container>
       </article>
+      <Container small>
+        <Footer></Footer>
+      </Container>
     </div>
   );
 }
