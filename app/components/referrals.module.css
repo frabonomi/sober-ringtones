@@ -19,7 +19,7 @@
 .referrals__link {
   color: var(--gray-alpha-200);
   display: block;
-  height: 2.5rem;
+  width: 12rem;
   transition: all 0.2s ease-out;
 
   &:hover,

@@ -4,7 +4,6 @@ export const TheVergeIcon = () => (
     viewBox="0 0 309 70"
     role="img"
     width="100%"
-    height="100%"
     fill="currentColor"
   >
     <title>The Verge</title>

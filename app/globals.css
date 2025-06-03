@@ -18,6 +18,8 @@
   --color-102: 135, 44, 234;
   --color-103: 160, 205, 7;
   --color-104: 217, 145, 62;
+
+  --success-rgb: 75, 200, 85;
 }
 
 html {
@@ -67,11 +69,9 @@ a {
 }
 
 .styledLinks a {
-  background-image: linear-gradient(
-    to right,
-    rgba(var(--primary-rgb), 0.2) 0%,
-    rgba(var(--primary-rgb), 0.2) 75%
-  );
+  background-image: linear-gradient(to right,
+      rgba(var(--primary-rgb), 0.2) 0%,
+      rgba(var(--primary-rgb), 0.2) 75%);
   background-position: 0 0.9em;
   background-repeat: repeat-x;
   background-size: 1px 8px;

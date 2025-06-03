@@ -76,6 +76,23 @@ ol.guides__steps {
       width: 2.5rem;
     }
   }
+
+
+  li.guides__stepDone {
+    &::before {
+      background-color: rgba(var(--success-rgb), 1);
+      color: white;
+      content: "✔︎";
+    }
+  }
+}
+
+li.guides__stepDone {
+  &::before {
+    background-color: var(--primary);
+    color: white;
+    content: "✓";
+  }
 }
 
 .guides__imageContainer {
