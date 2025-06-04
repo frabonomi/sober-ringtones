@@ -1,27 +1,28 @@
-"use client";
+'use client';
+
+import styles from './sharingButtons.module.css';
 
 import {
-  FacebookShareButton,
   FacebookIcon,
-  FacebookMessengerShareButton,
   FacebookMessengerIcon,
-  LinkedinShareButton,
+  FacebookMessengerShareButton,
+  FacebookShareButton,
   LinkedinIcon,
-  RedditShareButton,
+  LinkedinShareButton,
   RedditIcon,
-  TelegramShareButton,
+  RedditShareButton,
   TelegramIcon,
-  TwitterShareButton,
+  TelegramShareButton,
   TwitterIcon,
+  TwitterShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-} from "next-share";
-import styles from "./sharingButtons.module.css";
+} from 'next-share';
 
 const sharingData = {
-  url: "https://sober-ringtones.wize.io",
+  url: 'https://sober-ringtones.wize.io',
   quote:
-    "Check out Sober Ringtones and find a humble ringtone for your phone calls and notifications.",
+    'Check out Sober Ringtones and find a humble ringtone for your phone calls and notifications.',
 };
 
 export default function SharingButtons() {
@@ -30,7 +31,7 @@ export default function SharingButtons() {
       <FacebookShareButton url={sharingData.url} quote={sharingData.quote}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>
-      <FacebookMessengerShareButton url={sharingData.url} appId={""}>
+      <FacebookMessengerShareButton url={sharingData.url} appId={''}>
         <FacebookMessengerIcon size={32} round />
       </FacebookMessengerShareButton>
       <LinkedinShareButton url={sharingData.url}>
@@ -45,11 +46,7 @@ export default function SharingButtons() {
       <TwitterShareButton url={sharingData.url} title={sharingData.quote}>
         <TwitterIcon size={32} round />
       </TwitterShareButton>
-      <WhatsappShareButton
-        url={sharingData.url}
-        title={sharingData.quote}
-        separator=":: "
-      >
+      <WhatsappShareButton url={sharingData.url} title={sharingData.quote} separator=":: ">
         <WhatsappIcon size={32} round />
       </WhatsappShareButton>
     </div>
