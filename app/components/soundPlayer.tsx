@@ -16,24 +16,25 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    if (audioRef.current === null) {
+    const audio = audioRef.current;
+    if (audio === null) {
       return;
     }
 
     if (isPlaying) {
-      audioRef.current.play();
+      audio.play();
     } else {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
     }
 
     return () => {
-      if (audioRef.current === null) {
+      if (audio === null) {
         return;
       }
 
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
+      audio.pause();
+      audio.currentTime = 0;
     };
   }, [isPlaying]);
 
