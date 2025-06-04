@@ -1,5 +1,6 @@
-import styles from "./referrals.module.css";
-import { TheVergeIcon } from "./icons/the-verge";
+import styles from './referrals.module.css';
+
+import { TheVergeIcon } from './icons/the-verge';
 
 export default function Referrals() {
   return (
@@ -12,8 +13,7 @@ export default function Referrals() {
             href="https://www.theverge.com/installer-newsletter/617653/best-music-apps-iphone-android-installer"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            className={styles.referrals__link}
-          >
+            className={styles.referrals__link}>
             <TheVergeIcon></TheVergeIcon>
           </a>
         </li>

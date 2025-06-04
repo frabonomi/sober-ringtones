@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
-import { KeyboardEvent, useEffect, useRef, useState } from "react";
-import styles from "./soundPlayer.module.css";
-import { saEvent } from "../utils/saEvent";
+import styles from './soundPlayer.module.css';
+
+import { KeyboardEvent, useEffect, useRef, useState } from 'react';
+
+import { saEvent } from '../utils/saEvent';
 
 type Props = {
   title: string;
@@ -24,7 +26,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-  
+
     return () => {
       if (audioRef.current === null) {
         return;
@@ -36,10 +38,10 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
   }, [isPlaying]);
 
   function handleKeyDown(e: KeyboardEvent<HTMLDivElement>): void {
-    if (e.code === "Space") {
+    if (e.code === 'Space') {
       e.preventDefault();
     }
-    if (["Enter", "Space"].includes(e.code)) {
+    if (['Enter', 'Space'].includes(e.code)) {
       onTogglePlay();
     }
   }
@@ -48,7 +50,7 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
     setIsPlaying(!isPlaying);
 
     if (!isPlaying) {
-      saEvent("ringtone played", { title });
+      saEvent('ringtone played', { title });
     }
   }
 
@@ -58,23 +60,20 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
       onClick={() => onTogglePlay()}
       onKeyDown={handleKeyDown}
       tabIndex={0}
-      role="button"
-    >
+      role="button">
       <audio
         ref={audioRef}
         src={soundUrl}
         onEnded={() => {
           setIsPlaying(false);
-        }}
-      ></audio>
+        }}></audio>
 
       <div
         className={styles.soundPlayer__progressBar}
         style={{
-          width: isPlaying ? `100%` : "0",
-          transitionDuration:  isPlaying ? `${audioRef.current?.duration}s` : '0s'
-        }}
-      ></div>
+          width: isPlaying ? `100%` : '0',
+          transitionDuration: isPlaying ? `${audioRef.current?.duration}s` : '0s',
+        }}></div>
 
       <div className={styles.soundPlayer__content}>
         <div className={styles.soundPlayer__playButton}>
@@ -84,13 +83,8 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
             viewBox="0 0 24 24"
             fill="currentColor"
             width="20px"
-            height="20px"
-          >
-            {!isPlaying ? (
-              <path d="M8 5v14l11-7z" />
-            ) : (
-              <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-            )}
+            height="20px">
+            {!isPlaying ? <path d="M8 5v14l11-7z" /> : <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />}
           </svg>
         </div>
 
@@ -102,12 +96,11 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
           className={styles.soundPlayer__download}
           onClick={(e) => {
             e.stopPropagation();
-            saEvent("ringtone downloaded", { title });
+            saEvent('ringtone downloaded', { title });
           }}
           onKeyDown={(e) => e.stopPropagation()}
           aria-label={`Download ${title}`}
-          title={`Download ${title}`}
-        >
+          title={`Download ${title}`}>
           <svg
             className={styles.soundPlayer__downloadIcon}
             width="24"
@@ -115,20 +108,17 @@ export default function SoundPlayer({ title, soundUrl }: Props) {
             viewBox="0 0 24 24"
             fill="none"
             role="img"
-            color="#000000"
-          >
+            color="#000000">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
               d="M13.0001 4.50001L13.0001 12.0857L14.293 10.7927L15.7072 12.2069L12.0001 15.9143L8.29297 12.2069L9.70723 10.7927L11.0001 12.0857L11.0001 4.50001H13.0001Z"
-              fill="#000000"
-            ></path>
+              fill="#000000"></path>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
               d="M19.0001 19.5H5V17.5H19.0001V19.5Z"
-              fill="#000000"
-            ></path>
+              fill="#000000"></path>
           </svg>
         </a>
       </div>

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import GitHubButton from "react-github-btn";
+import GitHubButton from 'react-github-btn';
 
 export default function GithubStarButton() {
   return (
@@ -10,8 +10,7 @@ export default function GithubStarButton() {
       data-icon="octicon-star"
       data-size="large"
       data-show-count="true"
-      aria-label="Star frabonomi/sober-ringtones on GitHub"
-    >
+      aria-label="Star frabonomi/sober-ringtones on GitHub">
       Star on GitHub
     </GitHubButton>
   );

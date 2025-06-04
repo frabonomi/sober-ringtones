@@ -77,12 +77,11 @@ ol.guides__steps {
     }
   }
 
-
   li.guides__stepDone {
     &::before {
       background-color: rgba(var(--success-rgb), 1);
       color: white;
-      content: "✔︎";
+      content: '✔︎';
     }
   }
 }
@@ -91,7 +90,7 @@ li.guides__stepDone {
   &::before {
     background-color: var(--primary);
     color: white;
-    content: "✓";
+    content: '✓';
   }
 }
 

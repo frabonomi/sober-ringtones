@@ -1,8 +1,9 @@
-import SectionTitle from "./sectionTitle";
-import styles from "./ringtoneSection.module.css";
-import Container from "./container";
-import SoundPlayer from "./soundPlayer";
-import { codeSoundUrlMapping } from "../constants/codeSoundUrlMapping";
+import styles from './ringtoneSection.module.css';
+
+import { codeSoundUrlMapping } from '../constants/codeSoundUrlMapping';
+import Container from './container';
+import SectionTitle from './sectionTitle';
+import SoundPlayer from './soundPlayer';
 
 type Props = {
   code: string;
@@ -10,7 +11,7 @@ type Props = {
 };
 
 export default function RingtoneSection({ code, title }: Props) {
-  const audioFormat = "mp3";
+  const audioFormat = 'mp3';
 
   return (
     <section className={`${styles.ringtoneSection} ${styles[`color${code}`]}`}>
@@ -28,8 +29,7 @@ export default function RingtoneSection({ code, title }: Props) {
               </div>
               <SoundPlayer
                 title={`${code} - Call`}
-                soundUrl={`${codeSoundUrlMapping[code].call}.${audioFormat}`}
-              ></SoundPlayer>
+                soundUrl={`${codeSoundUrlMapping[code].call}.${audioFormat}`}></SoundPlayer>
             </div>
             <div className={styles.ringtoneSection__row}>
               <div className={styles.ringtoneSection__rowTitle}>
@@ -37,8 +37,7 @@ export default function RingtoneSection({ code, title }: Props) {
               </div>
               <SoundPlayer
                 title={`${code} - Notification`}
-                soundUrl={`${codeSoundUrlMapping[code].notification}.${audioFormat}`}
-              ></SoundPlayer>
+                soundUrl={`${codeSoundUrlMapping[code].notification}.${audioFormat}`}></SoundPlayer>
             </div>
           </div>
         </Container>
