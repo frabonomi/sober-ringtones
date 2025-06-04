@@ -105,6 +105,9 @@ export default async function AddCustomRingtoneAndroidPage() {
               ></Image>
             </div>
           </li>
+          <li className={styles.guides__stepDone}>
+            Done! Go back to <Link href={"/"}>Sober Ringtones</Link>.
+          </li>
         </ol>
       </main>
     </>
