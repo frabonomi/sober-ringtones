@@ -3,6 +3,7 @@
     "deploymentEnabled": false
   },
   "github": {
-    "autoAlias": false
+    "autoAlias": false,
+    "autoJobCancelation": true
   }
 }
