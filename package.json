@@ -1,13 +1,15 @@
 {
   "name": "sober-ringtones",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "release": "commit-and-tag-version",
+    "prepare": "husky"
   },
   "dependencies": {
     "lucide-react": "0.487.0",
@@ -18,13 +20,17 @@
     "react-github-btn": "1.4.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
     "@eslint/eslintrc": "^3",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "commit-and-tag-version": "12.6.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
+    "husky": "9.1.7",
     "prettier": "3.5.3",
     "typescript": "^5"
   }
