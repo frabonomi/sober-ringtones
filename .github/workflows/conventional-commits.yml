@@ -1,0 +1,48 @@
+name: Conventional Commits Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  conventional-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check conventional commits
+        run: |
+          # Get the base branch (usually main/master)
+          BASE_BRANCH=${GITHUB_BASE_REF:-main}
+          
+          # Get commits between base and head
+          COMMITS=$(git log --oneline $BASE_BRANCH..HEAD --pretty=format:"%s")
+          
+          # Check if any commits follow conventional commit format
+          if echo "$COMMITS" | grep -qE "^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\(.+\))?: .+"; then
+            echo "✅ Found conventional commits in PR"
+            echo "Commits:"
+            echo "$COMMITS"
+          else
+            echo "❌ No conventional commits found in PR"
+            echo "Please ensure your PR title or at least one commit follows the conventional commit format:"
+            echo "type(scope): description"
+            echo ""
+            echo "Types: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert"
+            echo ""
+            echo "Current commits:"
+            echo "$COMMITS"
+            exit 1
+          fi
