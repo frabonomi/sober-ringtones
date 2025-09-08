@@ -1,0 +1,31 @@
+.themeToggle {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--foreground);
+  cursor: pointer;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  width: 2.5rem;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--gray-alpha-50);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  & svg {
+    transition: transform 0.2s ease-out;
+  }
+
+  &:hover svg {
+    transform: rotate(15deg);
+  }
+}

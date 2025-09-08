@@ -2,6 +2,13 @@
   margin-top: 5rem;
 }
 
+.guides__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
 .guides__backButton {
   align-items: center;
   display: flex;
@@ -10,7 +17,7 @@
   font-weight: var(--font-weight-bold);
   gap: 0.5rem;
   letter-spacing: 0.05em;
-  margin-bottom: 1.5rem;
+  margin: 0;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out;
 

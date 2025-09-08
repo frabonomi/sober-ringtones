@@ -17,8 +17,15 @@
   }
 }
 
-.page__intro {
+.page__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 2rem;
+}
+
+.page__intro {
+  margin: 0;
 }
 
 .page__paragraph {

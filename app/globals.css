@@ -1,6 +1,7 @@
 :root {
-  --background: #ffffff;
+  --background: #ededed;
   --foreground: #1e1e23;
+  --foreground-rgb: 30, 30, 35;
   --primary: #082cff;
   --primary-rgb: 8, 44, 255;
 
@@ -20,6 +21,34 @@
   --color-104: 217, 145, 62;
 
   --success-rgb: 75, 200, 85;
+
+  /* Selection colors */
+  --selection-bg: #ccd1fc;
+  --selection-color: var(--primary);
+}
+
+[data-theme='dark'] {
+  --background: #14151d;
+  --foreground: #e4e4e7;
+  --foreground-rgb: 228, 228, 231;
+  --primary: #3b82f6;
+  --primary-rgb: 59, 130, 246;
+
+  --gray-rgb: 228, 228, 231;
+  --gray-alpha-400: rgba(var(--gray-rgb), 0.4);
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.2);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.1);
+  --gray-alpha-50: rgba(var(--gray-rgb), 0.05);
+
+  --color-101: 59, 130, 246;
+  --color-102: 139, 92, 246;
+  --color-103: 34, 197, 94;
+  --color-104: 245, 158, 11;
+
+  --success-rgb: 34, 197, 94;
+
+  --selection-bg: #ccd1fc;
+  --selection-color: var(--background);
 }
 
 html {
@@ -41,10 +70,11 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease-out;
 }
 
 * {
@@ -54,8 +84,8 @@ body {
 }
 
 *::selection {
-  background: #e4e7ff;
-  color: var(--primary);
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 a {
@@ -71,22 +101,38 @@ a {
 .styledLinks a {
   background-image: linear-gradient(
     to right,
-    rgba(var(--primary-rgb), 0.2) 0%,
+    rgba(var(--primary-rgb), 0.2) 50%,
     rgba(var(--primary-rgb), 0.2) 75%
   );
-  background-position: 0 0.9em;
+  background-position: 0 0.95em;
   background-repeat: repeat-x;
-  background-size: 1px 8px;
-  border-radius: 4px;
+  background-size: 1px 0.4em;
   padding: 0.15em;
   margin: -0.15em;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: rgba(var(--primary-rgb), 0.75);
     background-image: none;
+    border-radius: 4px;
     color: white;
+  }
+}
+
+[data-theme='dark'] {
+  .styledLinks a {
+    background-image: linear-gradient(
+      to right,
+      rgba(var(--primary-rgb), 0.5) 50%,
+      rgba(var(--primary-rgb), 0.5) 75%
+    );
+
+    &:hover,
+    &:focus-visible {
+      background-image: none;
+    }
   }
 }
 
