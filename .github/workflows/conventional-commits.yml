@@ -2,30 +2,22 @@ name: Lint PR Title
 
 on:
   pull_request:
-    types: [opened, edited, synchronize, reopened]
-
-permissions:
-  contents: read
-  pull-requests: read
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
-  commitlint:
+  pr-title-lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint PR title
+      - name: Lint PR title with commitlint
         run: |
           echo "${{ github.event.pull_request.title }}" | npx commitlint
-        env:
-          NODE_PATH: ${{ github.workspace }}/node_modules
