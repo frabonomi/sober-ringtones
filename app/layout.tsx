@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 
+import { ThemeProvider } from './contexts/ThemeContext';
+
 const archia = localFont({
   src: [
     {
@@ -46,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={archia.className}>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
 
         <Script data-collect-dnt="true" src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>

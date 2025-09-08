@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import Referrals from './components/referrals';
 import RingtoneSection from './components/ringtoneSection';
 import SectionTitle from './components/sectionTitle';
+import ThemeToggle from './components/themeToggle';
 import Title from './components/title';
 import { ringtonesData } from './constants/ringtonesMetadata';
 
@@ -15,9 +16,12 @@ export default function Home() {
     <div className={styles.page}>
       <main>
         <Container>
-          <p className={`${styles.page__intro} styledLinks`}>
-            a project by <a href="https://wize.io">wize.io</a>
-          </p>
+          <div className={styles.page__header}>
+            <p className={`${styles.page__intro} styledLinks`}>
+              a project by <a href="https://wize.io">wize.io</a>
+            </p>
+            <ThemeToggle />
+          </div>
 
           <Title />
 

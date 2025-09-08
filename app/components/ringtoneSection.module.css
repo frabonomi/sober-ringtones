@@ -46,6 +46,12 @@
   }
 }
 
+[data-theme='dark'] .color101 {
+  .ringtoneSection__bg {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+}
+
 .color102 {
   .ringtoneSection__code {
     color: rgb(var(--color-102));
@@ -55,6 +61,12 @@
   .ringtoneSection__bg {
     background-color: rgba(var(--color-102), 0.2);
     color: rgb(var(--color-102));
+  }
+}
+
+[data-theme='dark'] .color102 {
+  .ringtoneSection__bg {
+    background-color: rgba(255, 255, 255, 0.025);
   }
 }
 
@@ -70,6 +82,12 @@
   }
 }
 
+[data-theme='dark'] .color103 {
+  .ringtoneSection__bg {
+    background-color: rgba(255, 255, 255, 0.025);
+  }
+}
+
 .color104 {
   .ringtoneSection__code {
     color: rgb(var(--color-104));
@@ -79,6 +97,12 @@
   .ringtoneSection__bg {
     background-color: rgba(var(--color-104), 0.2);
     color: rgb(var(--color-104));
+  }
+}
+
+[data-theme='dark'] .color104 {
+  .ringtoneSection__bg {
+    background-color: rgba(255, 255, 255, 0.025);
   }
 }
 
