@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/frabonomi/sober-ringtones/compare/v1.1.0...v1.2.0) (2025-09-08)
+
+
+### Features
+
+* add support for dark mode ([#20](https://github.com/frabonomi/sober-ringtones/issues/20)) ([0f163bc](https://github.com/frabonomi/sober-ringtones/commit/0f163bc85f899eb10e44337a62accbdc87cb1958))
+
 ## 1.1.0 (2025-09-08)
 
 
