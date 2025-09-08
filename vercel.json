@@ -1,0 +1,9 @@
+{
+  "git": {
+    "deploymentEnabled": false
+  },
+  "github": {
+    "autoAlias": false,
+    "autoJobCancelation": true
+  }
+}

@@ -2,11 +2,13 @@ name: Lint PR Title
 
 on:
   pull_request:
-    types: [opened, edited, reopened, synchronize]
+    types: [opened, edited, reopened]
 
 jobs:
   pr-title-lint:
     runs-on: ubuntu-latest
+    # Only run if this is a title change (edited event with title changes)
+    if: github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened' || (github.event.action == 'edited' && github.event.changes.title))
     steps:
       - uses: actions/checkout@v4
 
