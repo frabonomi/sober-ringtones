@@ -21,7 +21,7 @@
     transform: scale(0.95);
   }
 
-  svg {
+  & svg {
     transition: transform 0.2s ease-out;
   }
 
