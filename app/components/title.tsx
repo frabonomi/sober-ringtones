@@ -7,9 +7,9 @@ interface Props {
 
 export default function Title({ size, inheritColor }: Props) {
   return (
-    <h1
+    <span
       className={`${styles.title} ${size === 'small' && styles.small} ${inheritColor && styles.inheritColor}`}>
       Sober Ringtones
-    </h1>
+    </span>
   );
 }

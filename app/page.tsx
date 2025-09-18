@@ -23,7 +23,9 @@ export default function Home() {
             <ThemeToggle />
           </div>
 
-          <Title />
+          <h1>
+            <Title />
+          </h1>
 
           <div className={`${styles.page__why} ${styles.page__section}`}>
             <SectionTitle>The why</SectionTitle>
