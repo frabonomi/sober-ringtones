@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1](https://github.com/frabonomi/sober-ringtones/compare/v1.2.0...v1.2.1) (2025-09-18)
+
+
+### Bug Fixes
+
+* only one h1 on page ([#23](https://github.com/frabonomi/sober-ringtones/issues/23)) ([ef3ec99](https://github.com/frabonomi/sober-ringtones/commit/ef3ec99d7f0b290e15d7329c79c7d5a8eea56cbb))
+
 ## [1.2.0](https://github.com/frabonomi/sober-ringtones/compare/v1.1.0...v1.2.0) (2025-09-08)
 
 
