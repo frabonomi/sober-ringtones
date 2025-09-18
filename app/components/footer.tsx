@@ -20,7 +20,9 @@ export default function Footer() {
 
       <div className={styles.footer__info}>
         <Link href="/" className={styles.footer__logo}>
-          <Title size="small" inheritColor></Title>
+          <h3>
+            <Title size="small" inheritColor></Title>
+          </h3>
         </Link>
         <p className={styles.footer__license}>
           All ringtones were created by <a href="https://wize.io">Francesco Bonomi</a> and are
