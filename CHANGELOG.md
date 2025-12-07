@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.2](https://github.com/frabonomi/sober-ringtones/compare/v1.2.1...v1.2.2) (2025-12-07)
+
 ## [1.2.1](https://github.com/frabonomi/sober-ringtones/compare/v1.2.0...v1.2.1) (2025-09-18)
 
 
