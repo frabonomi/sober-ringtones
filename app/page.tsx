@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import Container from './components/container';
 import Footer from './components/footer';
+import GithubIconLink from './components/githubIconLink';
 import Referrals from './components/referrals';
 import RingtoneSection from './components/ringtoneSection';
 import SectionTitle from './components/sectionTitle';
@@ -20,7 +21,10 @@ export default function Home() {
             <p className={`${styles.page__intro} styledLinks`}>
               a project by <a href="https://wize.io">wize.io</a>
             </p>
-            <ThemeToggle />
+            <div className={styles.page__headerActions}>
+              <GithubIconLink />
+              <ThemeToggle />
+            </div>
           </div>
 
           <h1>

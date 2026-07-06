@@ -8,7 +8,9 @@
   display: flex;
   height: 2.5rem;
   justify-content: center;
-  transition: all 0.2s ease-out;
+  transition:
+    background-color 0.2s ease-out,
+    transform 0.34s cubic-bezier(0.16, 1, 0.3, 3);
   width: 2.5rem;
 
   &:hover,
@@ -26,6 +28,21 @@
   }
 
   &:hover svg {
-    transform: rotate(15deg);
+    transform: rotate(25deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .themeToggle {
+    transition: none;
+  }
+
+  .themeToggle:hover,
+  .themeToggle:focus-visible {
+    transform: scale(1.05);
+  }
+
+  .themeToggle svg {
+    transition: none;
   }
 }

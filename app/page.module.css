@@ -28,6 +28,12 @@
   margin: 0;
 }
 
+.page__headerActions {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+}
+
 .page__paragraph {
   font-size: 1.25rem;
   line-height: 1.5;

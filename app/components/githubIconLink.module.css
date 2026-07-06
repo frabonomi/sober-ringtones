@@ -1,0 +1,117 @@
+.githubIconLink {
+  align-items: center;
+  border-radius: 0.5rem;
+  color: var(--foreground);
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+  transition:
+    background-color 0.2s ease-out,
+    transform 0.2s ease-out;
+  width: 2.5rem;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--gray-alpha-50);
+    transform: scale(1.05);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover .sparkle,
+  &:focus-visible .sparkle {
+    animation-delay: var(--sparkle-delay);
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-name: githubStarPop;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1.25);
+  }
+}
+
+.sparkle {
+  color: #f5c84c;
+  display: flex;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.2) rotate(-18deg);
+}
+
+.sparkleOne {
+  --sparkle-delay: 0s;
+  --star-x: -1rem;
+  --star-y: -1.1rem;
+  --star-end-x: -1.2rem;
+  --star-end-y: -1.45rem;
+  --star-scale: 1;
+  --star-rotate: -22deg;
+}
+
+.sparkleTwo {
+  --sparkle-delay: 0.07s;
+  --star-x: 0.1rem;
+  --star-y: -1.45rem;
+  --star-end-x: 0.2rem;
+  --star-end-y: -1.75rem;
+  --star-scale: 0.85;
+  --star-rotate: 18deg;
+}
+
+.sparkleThree {
+  --sparkle-delay: 0.14s;
+  --star-x: 1.05rem;
+  --star-y: -0.8rem;
+  --star-end-x: 1.35rem;
+  --star-end-y: -1rem;
+  --star-scale: 1.05;
+  --star-rotate: 31deg;
+}
+
+@keyframes githubStarPop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2) rotate(-18deg);
+  }
+
+  38% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--star-x)), calc(-50% + var(--star-y)))
+      scale(calc(var(--star-scale) * 1.15)) rotate(var(--star-rotate));
+  }
+
+  68% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--star-x)), calc(-50% + var(--star-y)))
+      scale(var(--star-scale)) rotate(var(--star-rotate));
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--star-end-x)), calc(-50% + var(--star-end-y)))
+      scale(var(--star-scale)) rotate(calc(var(--star-rotate) + 22deg));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .githubIconLink {
+    transition: none;
+  }
+
+  .githubIconLink:hover .sparkle,
+  .githubIconLink:focus-visible .sparkle {
+    animation: none;
+    opacity: 1;
+    transform: translate(calc(-50% + var(--star-x)), calc(-50% + var(--star-y)))
+      scale(var(--star-scale)) rotate(var(--star-rotate));
+  }
+}
