@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.3.0](https://github.com/frabonomi/sober-ringtones/compare/v1.2.2...v1.3.0) (2026-07-06)
+
+
+### Features
+
+* add animated GitHub header link ([9d52385](https://github.com/frabonomi/sober-ringtones/commit/9d52385042fa9dce64cb728c0ca3885779995153))
+
 ## [1.2.2](https://github.com/frabonomi/sober-ringtones/compare/v1.2.1...v1.2.2) (2025-12-07)
 
 ## [1.2.1](https://github.com/frabonomi/sober-ringtones/compare/v1.2.0...v1.2.1) (2025-09-18)
