@@ -58,3 +58,22 @@
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
+
+.footer__crossPromo {
+  color: rgba(var(--gray-rgb), 0.65);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+
+  & a {
+    color: var(--foreground);
+    text-decoration: underline;
+    text-decoration-color: var(--gray-alpha-200);
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.15s ease-out;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: currentColor;
+    }
+  }
+}

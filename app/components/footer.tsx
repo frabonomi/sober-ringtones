@@ -32,6 +32,11 @@ export default function Footer() {
           </a>{' '}
           license.
         </p>
+        <p className={styles.footer__crossPromo}>
+          Also by me:{' '}
+          <a href="https://mowji.app/?utm_source=sober-ringtones&utm_medium=footer">Mowji</a>, a
+          keyboard-first emoji picker for Mac.
+        </p>
       </div>
     </footer>
   );

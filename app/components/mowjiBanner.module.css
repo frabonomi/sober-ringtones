@@ -1,0 +1,149 @@
+.banner {
+  align-items: center;
+  animation: bannerIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--background);
+  border-radius: 0.875rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  box-shadow:
+    inset 0 0 0 100vmax transparent,
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 0.5rem;
+  left: 1rem;
+  padding: 0.875rem 0.5rem 0.875rem 1rem;
+  position: fixed;
+  right: 1rem;
+  transition:
+    border-color 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out,
+    visibility 0s linear 0s;
+  z-index: 10;
+
+  @media screen and (min-width: 600px) {
+    bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    left: auto;
+    max-width: 22rem;
+    right: 1.5rem;
+  }
+}
+
+.banner_hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out,
+    visibility 0s linear 0.2s;
+  visibility: hidden;
+}
+
+/* The page and the banner share a color in dark mode and shadows vanish, so lift the surface and draw an edge instead. */
+[data-theme='dark'] .banner {
+  background-color: #1d1e27;
+  border: 1px solid var(--gray-alpha-200);
+  box-shadow: inset 0 0 0 100vmax transparent;
+}
+
+.banner__link {
+  align-items: center;
+  border-radius: 0.5rem;
+  color: var(--foreground);
+  display: flex;
+  flex: 1;
+  gap: 0.875rem;
+  min-width: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/* The whole card reacts when its link is hovered, but not when the close button is. */
+.banner:has(.banner__link:hover) {
+  box-shadow:
+    inset 0 0 0 100vmax var(--gray-alpha-50),
+    0 2px 4px rgba(0, 0, 0, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] .banner:has(.banner__link:hover) {
+  border-color: var(--gray-alpha-400);
+  box-shadow: inset 0 0 0 100vmax var(--gray-alpha-50);
+}
+
+.banner__icon {
+  flex-shrink: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.banner__title {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+.banner__body {
+  color: rgba(var(--gray-rgb), 0.7);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* 44px hit area for thumbs, drawn as a smaller button. */
+.banner__close {
+  align-items: center;
+  background-color: transparent;
+  background-clip: content-box;
+  border: none;
+  border-radius: 0.75rem;
+  color: rgba(var(--gray-rgb), 0.6);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  height: 44px;
+  justify-content: center;
+  padding: 6px;
+  transition:
+    background-color 0.2s ease-out,
+    color 0.2s ease-out;
+  width: 44px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--gray-alpha-50);
+    color: var(--foreground);
+  }
+}
+
+@keyframes bannerIn {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner,
+  .banner_hidden {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+}

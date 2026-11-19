@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Container from './components/container';
 import Footer from './components/footer';
 import GithubIconLink from './components/githubIconLink';
+import MowjiBanner from './components/mowjiBanner';
 import Referrals from './components/referrals';
 import RingtoneSection from './components/ringtoneSection';
 import SectionTitle from './components/sectionTitle';
@@ -79,6 +80,8 @@ export default function Home() {
       <Container>
         <Footer></Footer>
       </Container>
+
+      <MowjiBanner />
     </div>
   );
 }
